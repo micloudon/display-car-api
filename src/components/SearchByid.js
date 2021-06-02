@@ -21,7 +21,7 @@ const showCar = () => {
   })
   setActiveResults('Results');
 }
-console.log(car)
+console.log(car.length)
 
 return(
     <div>

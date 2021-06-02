@@ -19,6 +19,10 @@ return(
             <td align="right">Year:</td>
             <td align="left"><input id="year" className="searchByName" type='text'></input></td>
             </tr>
+            <tr>
+            <td align="right"></td>
+            <td className="left"><input type="submit" value="Submit" /></td>
+            </tr>
     </table>
 
 

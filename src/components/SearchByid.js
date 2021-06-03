@@ -26,17 +26,17 @@ console.log(car.length)
 return(
     <div>
     {/* <form> */}
-        <h2>Find by id:</h2>
+        <h2 className="pageText">Find by id:</h2>
 
-        <table>
+        <table className="searchTable">
             <tr>
-            <th align="right">id:</th>
+            <th align="right"><h3>Id:</h3></th>
             <td align="left"><input onChange={inputIdHandler} id="id" className="searchByName" type='number' 
             placeholder="Enter a number"></input></td>
             </tr>
             <tr>
             <td align="right"></td>
-            <td className="left"><input onClick={showCar} type="submit" value="Submit" /></td>
+            <td className="left"><button className="searchBtn" onClick={showCar}><strong>Submit</strong></button></td>
             </tr>
         </table>
 

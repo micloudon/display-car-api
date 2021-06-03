@@ -25,9 +25,9 @@ const SearchByMake = ({make, setMake, car, setCar, setActiveResults}) => {
 return(
     <div>
     {/* // <form> */}
-        <h2>Find by make, model and year:</h2>
+        <h2 className="pageText">Find by make:</h2>
 
-        <table>
+        <table className="searchTable">
             <tr>
             <th align="right">Make:</th>
             <td align="left"><input onChange={inputMakeHandler} id="make" className="searchByName" type='text'
@@ -35,7 +35,7 @@ return(
             </tr>
             <tr>
             <td align="right"></td>
-            <td className="left"><input onClick={showCars} type="submit" value="Submit" /></td>
+            <td className="left"><button className="searchBtn" onClick={showCars}><strong>Submit</strong></button></td>
             </tr>
     </table>
 

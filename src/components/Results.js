@@ -2,19 +2,24 @@ const Results = ({car}) => {
 
   return(
 <div>
-    <h3>Results Found: {car.length}</h3>
-        <table>
+    <h3 className="pageText">Results Found: {car.length}</h3>
+        <table className="resultsTable">
         
-          <th>Make</th> <th>Model</th> <th>Year</th> <th>HorsePower</th> <th>fuelType</th> <th>Cylinders</th>
-          <th>driveTrain</th> <th>Number of Doors</th> <th>Size</th> <th>Style</th> <th>Highway MPG</th>
-          <th>City MPG</th> <th>MSRP</th>
+          <th className="resultsTd">Make</th> <th className="resultsTd">Model</th> <th className="resultsTd">Year</th> 
+          <th className="resultsTd">HorsePower</th> <th className="resultsTd">fuelType</th> <th className="resultsTd">Cylinders</th>
+          <th className="resultsTd">driveTrain</th> <th className="resultsTd">Number of Doors</th> 
+          <th className="resultsTd">Size</th> <th className="resultsTd">Style</th> <th className="resultsTd">Highway MPG</th>
+          <th className="resultsTd">City MPG</th> <th className="resultsTd">MSRP</th>
           {car.length > 1 ?
           car.map((c) => (
           <tr>
-            <td>{c.make}</td> <td>{c.model}</td> <td>{c.year}</td> <td>{c.horsePower}</td>
-            <td>{c.fuelType}</td> <td>{c.cylinders}</td> <td>{c.driveTrain}</td>
-            <td>{c.numDoors}</td> <td>{c.size}</td> <td>{c.style}</td> <td>{c.highwayMpg}</td>
-            <td>{c.cityMpg}</td> <td>{c.msrp}</td>
+            <td className="resultsTd">{c.make}</td> <td className="resultsTd">{c.model}</td> <td className="resultsTd">{c.year}</td> 
+            <td className="resultsTd">{c.horsePower}</td>
+            <td className="resultsTd">{c.fuelType}</td> <td className="resultsTd">{c.cylinders}</td>
+            <td className="resultsTd">{c.driveTrain}</td>
+            <td className="resultsTd">{c.numDoors}</td> <td className="resultsTd">{c.size}</td> 
+            <td className="resultsTd">{c.style}</td> <td className="resultsTd">{c.highwayMpg}</td>
+            <td className="resultsTd">{c.cityMpg}</td> <td className="resultsTd">{c.msrp}</td>
             
           </tr>
           

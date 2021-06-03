@@ -91,16 +91,16 @@ const makebtnId = {
   return (
     <div className="App">
       <h1>Find Cars  </h1>
-      <button style={makebtnStyle} onClick={buttonClickMake}>
+      <button style={makebtnStyle} className="navBtn" onClick={buttonClickMake}>
         <h2>Search by Make:</h2>
       </button>
-      <button style={makeModelbtnStyle} onClick={buttonClickMakeModel}>
+      <button style={makeModelbtnStyle} className="navBtn" onClick={buttonClickMakeModel}>
         <h2>Search by Make and Model:</h2>
       </button>
-      <button style={makeModelbtnStyleYear} onClick={buttonClickMakeModelYear}>
+      <button style={makeModelbtnStyleYear} className="navBtn" onClick={buttonClickMakeModelYear}>
         <h2>Search by Make, Model and Year:</h2>
       </button>
-      <button style={makebtnId} onClick={buttonClickId}>
+      <button style={makebtnId} className="navBtn" onClick={buttonClickId}>
         <h2>Search by ID:</h2>
       </button>
         {activeComponent === 'searchMake&Model&Year' && 

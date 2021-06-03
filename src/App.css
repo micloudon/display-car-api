@@ -64,9 +64,14 @@ h1 {
 input {
   padding: 4px;
   font-size: large;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }
 
+th {
+  font-size: 20px;
+  padding: 20px;
+
+}
 .searchTable {
   margin-left: auto;
   margin-right: auto;
@@ -85,15 +90,48 @@ input {
   border-collapse: collapse;
   background: #d6fcff;
   border: none;
-  border-radius: 2px;
+  border-radius: 4px;
   padding: 20px;
   padding-bottom: 100px;
 }
 
-.resultsTd {
-  /* border-right: 1px solid black; */
+.resultsTable td {
   padding:11px;
+  font-weight: bold;
+}
 
+.resultsTable tr {
+  border-bottom: 5px solid #00639c;
+}
+
+.paginationBtns {
+  width: 80%;
+  height: 40px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.paginationBtns a {
+  background: #d6fcff;
+  cursor: pointer;
+  /* color: white; */
+  margin-top: 10px;
+  padding: 10px;
+  margin: 8px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+}
+
+.paginationBtns a:hover {
+  cursor: pointer;
+  border: 1px solid #d6fcff; 
+}
+
+.paginationActive a{
+  background: #00639c;
+  color: white;
 }
 
 /* table {

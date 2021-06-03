@@ -17,11 +17,12 @@ const showCar = () => {
     return res.json()
   })
   .then((data) => {
-    setCar(data)
+    setCar([data])
   })
   setActiveResults('Results');
 }
-console.log(car.length)
+
+// console.log(car);
 
 return(
     <div>
@@ -30,7 +31,7 @@ return(
 
         <table className="searchTable">
             <tr>
-            <th align="right"><h3>Id:</h3></th>
+            <th align="right">Id:</th>
             <td align="left"><input onChange={inputIdHandler} id="id" className="searchByName" type='number' 
             placeholder="Enter a number"></input></td>
             </tr>

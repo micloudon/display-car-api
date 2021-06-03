@@ -27,7 +27,7 @@ const SearchByMakeModelYear = ({make, setMake, model, setModel, year, setYear, c
         setActiveResults('Results');
       }
 
-    console.log(car.length);
+
 
 
 return(
@@ -36,17 +36,17 @@ return(
 
         <table className="searchTable">
             <tr>
-            <th align="right"><h3>Make:</h3></th>
+            <th align="right">Make:</th>
             <td align="left"><input onChange={inputMakeHandler} id="make" className="searchByName" type='text'
             placeholder="Enter a Make"></input></td>
             </tr>
             <tr>
-            <th align="right"><h3>Model:</h3></th>
+            <th align="right">Model:</th>
             <td align="left"><input onChange={inputModelHandler} id="make" className="searchByName" type='text'
             placeholder="Enter a Model"></input></td>
             </tr>
             <tr>
-            <th align="right"><h3>Year:</h3></th>
+            <th align="right">Year:</th>
             <td align="left"><input onChange={inputYearHandler} id="year" className="searchByName" type='text'
             placeholder="Enter a Year"></input></td>
             </tr>

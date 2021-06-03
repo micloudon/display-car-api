@@ -19,7 +19,6 @@ const SearchByMake = ({make, setMake, car, setCar, setActiveResults}) => {
         setActiveResults('Results');
       }
 
-    console.log(car.length);
 
 
 return(

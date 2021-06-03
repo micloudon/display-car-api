@@ -23,6 +23,8 @@ const [textColorMake, setTextColorMake] = useState('black');
 const [textColorMakeModel, setTextColorMakeModel] = useState('white');
 const [textColorMakeModelYear, setTextColorMakeModelYear] = useState('black');
 const [textColorId, setTextColorId] = useState('black');
+const [pagCar, setPagCar] = useState(car.slice(0, car.length));
+const [pageNumber, setPageNumber] = useState(0);
 
 const buttonClickMake = () => {
   setActiveComponent('searchMake')
@@ -88,6 +90,8 @@ const makebtnId = {
   backgroundColor: buttonColorId,
   color: textColorId
 }
+
+
   return (
     <div className="App">
       <h1>Find Cars  </h1>
@@ -146,7 +150,11 @@ const makebtnId = {
          { activeResults === 'Results' &&
           <Results
         name="results"
-        car={car}/>  
+        car={car}
+        pagCar={pagCar}
+        setPagCar={setPagCar}
+        pageNumber={pageNumber}
+        setPageNumber={setPageNumber}/>  
          }
        
     </div>

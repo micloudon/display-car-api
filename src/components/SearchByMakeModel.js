@@ -24,8 +24,6 @@ const SearchByMakeModel = ({make, setMake, model, setModel, car, setCar, setActi
         setActiveResults('Results');
       }
 
-    console.log(car.length);
-
 
 return(
     <div>
@@ -33,12 +31,12 @@ return(
 
         <table className="searchTable">
             <tr>
-            <th align="right"><h3>Make:</h3></th>
+            <th align="right">Make:</th>
             <td align="left"><input onChange={inputMakeHandler} id="make" className="searchByName" type='text'
             placeholder="Enter a Make"></input></td>
             </tr>
             <tr>
-            <th align="right"><h3>Model:</h3></th>
+            <th align="right">Model:</th>
             <td align="left"><input onChange={inputModelHandler} id="make" className="searchByName" type='text'
             placeholder="Enter a Model"></input></td>
             </tr>

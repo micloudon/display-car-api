@@ -29,17 +29,18 @@ const SearchByMakeModel = ({make, setMake, model, setModel, car, setCar, setActi
 
 return(
     <div>
-    {/* // <form> */}
-        <h3>Find by make, model and year:</h3>
+        <h2>Find by make, model and year:</h2>
 
         <table>
             <tr>
-            <td align="right">Make:</td>
-            <td align="left"><input onChange={inputMakeHandler} id="make" className="searchByName" type='text'></input></td>
+            <th align="right"><h3>Make:</h3></th>
+            <td align="left"><input onChange={inputMakeHandler} id="make" className="searchByName" type='text'
+            placeholder="Enter a Make"></input></td>
             </tr>
             <tr>
-            <td align="right">Model:</td>
-            <td align="left"><input onChange={inputModelHandler} id="make" className="searchByName" type='text'></input></td>
+            <th align="right">Model:</th>
+            <td align="left"><input onChange={inputModelHandler} id="make" className="searchByName" type='text'
+            placeholder="Enter a Model"></input></td>
             </tr>
             
             <tr>
@@ -49,7 +50,6 @@ return(
     </table>
 
 
-    {/* // </form> */}
     </div>
 )}
 

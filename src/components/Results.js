@@ -2,8 +2,7 @@ const Results = ({car}) => {
 
   return(
 <div>
-    
-    
+    <h3>Results Found: {car.length}</h3>
         <table>
         
           <th>Make</th> <th>Model</th> <th>Year</th> <th>HorsePower</th> <th>fuelType</th> <th>Cylinders</th>
@@ -16,7 +15,9 @@ const Results = ({car}) => {
             <td>{c.fuelType}</td> <td>{c.cylinders}</td> <td>{c.driveTrain}</td>
             <td>{c.numDoors}</td> <td>{c.size}</td> <td>{c.style}</td> <td>{c.highwayMpg}</td>
             <td>{c.cityMpg}</td> <td>{c.msrp}</td>
+            
           </tr>
+          
           ))
 
           

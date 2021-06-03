@@ -26,12 +26,13 @@ console.log(car.length)
 return(
     <div>
     {/* <form> */}
-        <h3>Find by id:</h3>
+        <h2>Find by id:</h2>
 
         <table>
             <tr>
-            <td align="right">id:</td>
-            <td align="left"><input onChange={inputIdHandler} id="id" className="searchByName" type='number'></input></td>
+            <th align="right">id:</th>
+            <td align="left"><input onChange={inputIdHandler} id="id" className="searchByName" type='number' 
+            placeholder="Enter a number"></input></td>
             </tr>
             <tr>
             <td align="right"></td>

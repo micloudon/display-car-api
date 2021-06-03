@@ -1,13 +1,53 @@
+body {
+  background: #b0ffd9;
+}
+
 .App {
   text-align: center;
+  
+}
+
+h1 {
+  font-size: 3em;
+}
+
+button {
+  border-radius: 8%;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover {
+  box-shadow: 0px 15px 20px #d6fff9;
+  transform: translateY(-7px);
+}
+
+input {
+  padding: 5px;
+  font-size: large;
 }
 
 table {
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 30px;
+  border: 1px solid black;
+  border-collapse: collapse;
+  background: #d6fcff;
 }
 
-/* .submit {
-  margin-left: 100px;
+tr {
+  
+  border: 1px solid black;
+  
+} 
 
-} */
+th, td {
+  border-right: 1px solid black;
+  padding: 10px;
+  
+}
+
+

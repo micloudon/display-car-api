@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 
 const SearchById = ({id, setId, car, setCar, setActiveResults}) => {
 
-const urlBase  = 'http://ec2-54-245-43-7.us-west-2.compute.amazonaws.com/api/';
+const urlBase  = 'https://pacific-taiga-60618.herokuapp.com/api/';
 
 
 const inputIdHandler = (e) => {

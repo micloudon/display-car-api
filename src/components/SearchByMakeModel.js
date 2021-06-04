@@ -2,7 +2,7 @@ import React from 'react'
 
 const SearchByMakeModel = ({make, setMake, model, setModel, car, setCar, setActiveResults}) => {
 
-    const urlBase  = 'http://ec2-54-245-43-7.us-west-2.compute.amazonaws.com/api/';
+    const urlBase  = 'https://pacific-taiga-60618.herokuapp.com/api/';
 
     const inputMakeHandler = (e) => {
         setMake(e.target.value);

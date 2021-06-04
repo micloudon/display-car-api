@@ -17,6 +17,8 @@ const SearchByMakeModelYear = ({make, setMake, model, setModel, year, setYear, c
       };
 
       const showCars = () => {
+        const regex = /[a-zA-Z]/;
+        if(regex.test(make) || regex.test(model)) {
         fetch(urlBase+make+'/'+model+'/'+year, { credentials: 'include'})
         .then(res => {
           return res.json()
@@ -25,6 +27,10 @@ const SearchByMakeModelYear = ({make, setMake, model, setModel, year, setYear, c
           setCar(data)
         })
         setActiveResults('Results');
+        }
+        else {
+          alert("entry Invalid")
+        }
       }
 
 

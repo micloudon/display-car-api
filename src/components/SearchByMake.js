@@ -6,10 +6,13 @@ const SearchByMake = ({make, setMake, car, setCar, setActiveResults}) => {
 
     const inputMakeHandler = (e) => {
         setMake(e.target.value);
+        
       };
 
       const showCars = () => {
-        fetch(urlBase+make, { credentials: 'include'})
+        const regex = /[a-zA-Z]/; 
+        if(regex.test(make) === true) {
+          fetch(urlBase+make, { credentials: 'include'})
         .then(res => {
           return res.json()
         })
@@ -17,6 +20,10 @@ const SearchByMake = ({make, setMake, car, setCar, setActiveResults}) => {
           setCar(data)
         })
         setActiveResults('Results');
+        }
+        else {
+          alert("entry must contain letters")
+        }
       }
 
 

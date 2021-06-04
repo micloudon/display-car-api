@@ -65,6 +65,13 @@ input {
   padding: 4px;
   font-size: large;
   margin-bottom: 8px;
+  border: 1px solid grey;
+  border-radius: 6px;
+  
+}
+
+input:hover {
+  background: #d6fcff;
 }
 
 th {

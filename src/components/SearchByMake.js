@@ -24,6 +24,7 @@ const SearchByMake = ({make, setMake, car, setCar, setActiveResults, setLoading}
         setActiveResults('Results');
         }
         else {
+          setLoading(false)
           alert("entry must contain letters")
         }
       }

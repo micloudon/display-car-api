@@ -31,6 +31,7 @@ const SearchByMakeModelYear = ({make, setMake, model, setModel, year, setYear, c
         setActiveResults('Results');
         }
         else {
+          setLoading(false)
           alert("entry Invalid")
         }
       }

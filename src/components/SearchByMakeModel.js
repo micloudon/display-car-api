@@ -30,6 +30,7 @@ const SearchByMakeModel = ({make, setMake, model, setModel, car, setCar, setActi
         }
 
         else {
+          setLoading(false)
           alert("entry must contain letters")
         }
         

@@ -5,8 +5,21 @@ import SearchByMake from './components/SearchByMake';
 import SearchById from './components/SearchByid';
 import Results from './components/Results';
 import React, { useState } from 'react';
+import Backdrop from '@material-ui/core/Backdrop';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme) => ({
+  backdrop: {
+    zIndex: theme.zIndex.drawer + 1,
+    color: '#fff',
+  },
+}));
+
+
 
 function App() {
+  const classes = useStyles();
 
 const [activeComponent, setActiveComponent] = useState('searchMake&Model');
 const [activeResults, setActiveResults] = useState('');
@@ -25,6 +38,7 @@ const [textColorMakeModelYear, setTextColorMakeModelYear] = useState('black');
 const [textColorId, setTextColorId] = useState('black');
 const [pagCar, setPagCar] = useState(car.slice(0, car.length));
 const [pageNumber, setPageNumber] = useState(0);
+const [loading, setLoading] = useState(false);
 
 const buttonClickMake = () => {
   setActiveComponent('searchMake')
@@ -118,6 +132,7 @@ const makebtnId = {
         car={car}
         setCar={setCar}
         setActiveResults={setActiveResults}
+        setLoading={setLoading}
         />}
         {activeComponent === 'searchMake' && 
         <SearchByMake name='searchMake'
@@ -126,6 +141,7 @@ const makebtnId = {
         car={car}
         setCar={setCar}
         setActiveResults={setActiveResults}
+        setLoading={setLoading}
         />}
         {activeComponent === 'searchMake&Model' && 
         <SearchByMakeModel name='searchMake&Model'
@@ -136,6 +152,7 @@ const makebtnId = {
         car={car}
         setCar={setCar}
         setActiveResults={setActiveResults}
+        setLoading={setLoading}
         />}
         {activeComponent === 'searchId' &&  
         <SearchById
@@ -144,6 +161,7 @@ const makebtnId = {
         car={car}
         setCar={setCar}
         setActiveResults={setActiveResults}
+        setLoading={setLoading}
         name="searchById"
          
          />}
@@ -156,7 +174,11 @@ const makebtnId = {
         pageNumber={pageNumber}
         setPageNumber={setPageNumber}/>  
          }
-       
+       {  loading === true &&
+       <Backdrop className={classes.backdrop} open>
+          <CircularProgress color="inherit" />
+        </Backdrop>
+      }
     </div>
   );
 }

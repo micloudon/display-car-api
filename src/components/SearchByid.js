@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 // import Results from './Results';
 
-const SearchById = ({id, setId, car, setCar, setActiveResults}) => {
+const SearchById = ({id, setId, car, setCar, setActiveResults, setLoading}) => {
 
 const urlBase  = 'https://pacific-taiga-60618.herokuapp.com/api/';
 
@@ -12,11 +12,14 @@ const inputIdHandler = (e) => {
 };
 
 const showCar = () => {
+  setLoading(true)
   fetch(urlBase+id, { credentials: 'include'})
   .then(res => {
+    
     return res.json()
   })
   .then((data) => {
+    setLoading(false)
     setCar([data])
   })
   setActiveResults('Results');

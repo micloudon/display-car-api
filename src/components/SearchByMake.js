@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SearchByMake = ({make, setMake, car, setCar, setActiveResults}) => {
+const SearchByMake = ({make, setMake, car, setCar, setActiveResults, setLoading}) => {
 
     const urlBase  = 'https://pacific-taiga-60618.herokuapp.com/api/';
 
@@ -10,6 +10,7 @@ const SearchByMake = ({make, setMake, car, setCar, setActiveResults}) => {
       };
 
       const showCars = () => {
+        setLoading(true)
         const regex = /[a-zA-Z]/; 
         if(regex.test(make) === true) {
           fetch(urlBase+make, { credentials: 'include'})
@@ -17,6 +18,7 @@ const SearchByMake = ({make, setMake, car, setCar, setActiveResults}) => {
           return res.json()
         })
         .then((data) => {
+          setLoading(false)
           setCar(data)
         })
         setActiveResults('Results');

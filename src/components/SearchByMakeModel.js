@@ -2,7 +2,7 @@ import React from 'react'
 
 const SearchByMakeModel = ({make, setMake, model, setModel, car, setCar, setActiveResults, setLoading}) => {
 
-    const urlBase  = 'https://pacific-taiga-60618.herokuapp.com/api/';
+    const urlBase  = `https://453rqtejr5.execute-api.us-west-2.amazonaws.com/InitStage/makemodel?carMake=${make}&carModel=${model}`;
 
     const inputMakeHandler = (e) => {
         setMake(e.target.value);
@@ -17,7 +17,7 @@ const SearchByMakeModel = ({make, setMake, model, setModel, car, setCar, setActi
         setLoading(true)
         const regex = /[a-zA-Z]/;
         if(regex.test(make) || regex.test(model)) {
-        fetch(urlBase+make+'/'+model, { credentials: 'include'})
+        fetch(urlBase,{})
         .then(res => {
           
           return res.json()

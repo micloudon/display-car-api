@@ -7,6 +7,9 @@ It works in tandum with a project that I made previously:
 <br>  
 
 https://github.com/micloudon/carApi  
+**Update:**  
+Now serving from Lambdas:  
+https://github.com/micloudon/lambdaApi  
 It pulls data from this api in the form of Json objects
 
 **Useful React commands:**  
